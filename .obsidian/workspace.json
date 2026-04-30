@@ -13,12 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NSD/NSD 04 — Go-To-Market.md",
+                "file": "Synthetic Team/ELaB 02 - Role Cards.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NSD 04 — Go-To-Market"
+              "title": "ELaB 02 - Role Cards"
+            }
+          },
+          {
+            "id": "dd6b37a49e1ead19",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Synthetic Team/03-Role Card-tmpl.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "03-Role Card-tmpl"
             }
           }
         ]
@@ -94,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NSD/NSD 04 — Go-To-Market.md",
+                "file": "Synthetic Team/ELaB 02 - Role Cards.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +118,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for NSD 04 — Go-To-Market"
+              "title": "Backlinks for ELaB 02 - Role Cards"
             }
           },
           {
@@ -113,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "NSD/NSD 04 — Go-To-Market.md",
+                "file": "Synthetic Team/ELaB 02 - Role Cards.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from NSD 04 — Go-To-Market"
+              "title": "Outgoing links from ELaB 02 - Role Cards"
             }
           },
           {
@@ -156,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NSD/NSD 04 — Go-To-Market.md",
+                "file": "Synthetic Team/ELaB 02 - Role Cards.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of NSD 04 — Go-To-Market"
+              "title": "Outline of ELaB 02 - Role Cards"
             }
           }
         ]
@@ -185,8 +199,19 @@
   },
   "active": "90b199375c1d4d85",
   "lastOpenFiles": [
-    "NSD/NSK - Clarify the Narrative.md",
+    "Synthetic Team/04-sdlc-roles-startup.md",
+    "Synthetic Team/ELaB 02 - Role Cards.md",
+    "Synthetic Team/ELaB 01 - Real-World Roles.md",
+    "Synthetic Team/03-Role Card-tmpl.md",
+    "Synthetic Team/04-sdlc-roles.md",
+    "Synthetic Team/ELaB 03 - Synthetic Team.md",
+    "assets/Prompt - Scoring.md",
+    "Synthetic Team/03-Role Card.md",
+    "Synthetic Team/02-Trusted Advisor.md",
+    "Synthetic Team/01-Synthetic Teams.md",
+    "Synthetic Team",
     "NSD/NSD 04 — Go-To-Market.md",
+    "NSD/NSK - Clarify the Narrative.md",
     "NSD/NSD 03 — DELIVERABLE.md",
     "NSD/NSD 02 — AGREEMENT.md",
     "NSD/NSD 01 — STORY.md",
@@ -194,7 +219,6 @@
     "NSD/👤 Ideal User Profile.md",
     "README.md",
     "assets/Newsletter - Example.md",
-    "assets/Prompt - Scoring.md",
     "idea/idea.analysis.critic.md",
     "NSD/🌟 KISS Exercise.md",
     "NSD/✈️ Airport Conversation.md",
@@ -202,16 +226,7 @@
     "assets/Newsletter - Design Doc.md",
     "assets/Prompt - Critic.md",
     "idea/idea.paper.md",
-    "WRO/round_6.md",
-    "WRO/round_0.md",
     "WRO",
-    "assets/ELaB Publishing.md",
-    "assets/Prompt - Due Diligence.md",
-    "assets/ElaB Differentiators.md",
-    "assets/Lobbyists.md",
-    "assets/Laws by categories.md",
-    "assets/Laws By Sector.md",
-    "assets/Prompt - Law Search.md",
     "assets",
     "idea",
     "NSD"
