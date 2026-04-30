@@ -10,12 +10,14 @@ This document will outline the process for non-code development process for gree
 4. Assets
 5. Synthetic Team
 6. UX interaction Model
-7. Diagrams
-8. Data Engineering
+7. PRD
+8. Gap Analysis between cutr and ElaB. Need to convert cutr codebase into elab application
+9. Diagrams
+10. Data Engineering
 	1. Importing Data (.gov sites)
 	2. Formating Data (datastore)
 	3. Distributing Data (RSS)
 	4. Integrating Data (RAG)
-9. APIs
-10. UI Design
-11. Deployment
+11. APIs
+12. UI Design
+13. Deployment
