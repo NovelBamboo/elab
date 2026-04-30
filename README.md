@@ -11,7 +11,7 @@ This document will outline the process for non-code development process for gree
 5. Synthetic Team
 6. UX interaction Model
 7. PRD
-8. Gap Analysis between cutr and ElaB. Need to convert cutr codebase into elab application
+8. Gap Analysis needed: between /Users/novelbamboo/Desktop/github/cutr and ElaB PRD. Instruction on what changes need to be made to cutr to convert cutr codebase into elab application. Save analysis to CUTR-ELAB-Gap-Design.md
 9. Diagrams
 10. Data Engineering
 	1. Importing Data (.gov sites)

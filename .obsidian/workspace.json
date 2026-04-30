@@ -22,20 +22,21 @@
             }
           },
           {
-            "id": "dd6b37a49e1ead19",
+            "id": "bf8dd8b41761c176",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Synthetic Team/03-Role Card-tmpl.md",
+                "file": "CUTR-ELAB-Gap-Design.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03-Role Card-tmpl"
+              "title": "CUTR-ELAB-Gap-Design"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -108,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PRD.md",
+                "file": "CUTR-ELAB-Gap-Design.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for PRD"
+              "title": "Backlinks for CUTR-ELAB-Gap-Design"
             }
           },
           {
@@ -127,12 +128,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PRD.md",
+                "file": "CUTR-ELAB-Gap-Design.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from PRD"
+              "title": "Outgoing links from CUTR-ELAB-Gap-Design"
             }
           },
           {
@@ -170,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PRD.md",
+                "file": "CUTR-ELAB-Gap-Design.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of PRD"
+              "title": "Outline of CUTR-ELAB-Gap-Design"
             }
           }
         ]
@@ -197,9 +198,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "90b199375c1d4d85",
+  "active": "bf8dd8b41761c176",
   "lastOpenFiles": [
+    "assets/Prompt - Due Diligence.md",
+    "CUTR-ELAB-Gap-Design.md",
+    "assets/Prompt - Law Search.md",
+    "assets/Lobbyists.md",
     "README.md",
+    "Synthetic Team/03-Role Card-tmpl.md",
     "PRD.md",
     "UX/ELaB-infographic.png",
     "UX/01-Interaction model.md",
@@ -207,7 +213,6 @@
     "UX",
     "Synthetic Team/04-sdlc-roles-startup.md",
     "Synthetic Team/ELaB 01 - Real-World Roles.md",
-    "Synthetic Team/03-Role Card-tmpl.md",
     "Synthetic Team/04-sdlc-roles.md",
     "Synthetic Team/ELaB 03 - Synthetic Team.md",
     "assets/Prompt - Scoring.md",
@@ -224,10 +229,6 @@
     "NSD/👤 Ideal User Profile.md",
     "assets/Newsletter - Example.md",
     "idea/idea.analysis.critic.md",
-    "NSD/🌟 KISS Exercise.md",
-    "NSD/✈️ Airport Conversation.md",
-    "idea/idea.analysis.scoring.md",
-    "assets/Newsletter - Design Doc.md",
     "WRO",
     "assets",
     "idea",

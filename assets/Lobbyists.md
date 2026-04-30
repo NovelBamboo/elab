@@ -13,7 +13,7 @@ Based on data from OpenSecrets, the top 10 industries by lobbying expenditures i
 |9|Securities & Investment|$60,000,000|
 |10|Real Estate|$55,000,000|
 
-These figures illustrate the significant financial resources various industries allocate to influence federal policy and decision-making processes. ([opensecrets.org](https://www.opensecrets.org/federal-lobbying/industries?utm_source=chatgpt.com "Industries - OpenSecrets"))
+These figures illustrate the significant financial resources various industries allocate to influence federal policy and decision-making processes. ([opensecrets.org](https://www.opensecrets.org))
 
 Based on data from OpenSecrets, the top 20 industries by federal lobbying expenditures in 2024 were:
 
