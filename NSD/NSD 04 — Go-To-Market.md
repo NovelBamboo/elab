@@ -1,198 +1,183 @@
-## 💸 Pricing & Go-To-Market (Refined)
+## 💸 Pricing & Go-To-Market
 
-### **Model:**
-
-Tiered Membership (Progressive Value Unlock)
+### **Model: Tiered Subscription (Value = Decision Quality)**
 
 ---
 
-### **Free Tier — Awareness Layer**
+### Tier 1 — Free (Acquisition Layer)
 
-**$0**
-
-- Weekly _“Laws Creating Money”_ digest
+- Weekly “policy → opportunity” digest
     
-- Limited / summarized outputs
+- Limited detail (no execution paths)
     
 
-👉 Purpose:
-
-- Build habit
-    
-- Prove value quickly
-    
-- Top-of-funnel acquisition
-    
+👉 Purpose: awareness + trust building
 
 ---
 
-### **Tier 1 — Industry Alerts**
+### Tier 2 — $49–$99/mo (Operator Tier)
 
-**$29/mo**
+- Full access to:
+    
+    - opportunities
+        
+    - execution paths
+        
+- Real-time alerts
+    
 
-- Industry-specific law alerts (Fintech initially)
-    
-- Early signal notifications
-    
-- Filtered relevance (less noise)
-    
-
-👉 Value:  
-Client no longer searches — **signals come directly to them**
+👉 Target: builders / founders
 
 ---
 
-### **Tier 2 — Opportunity Breakdown**
+### Tier 3 — $199–$499/mo (Allocator Tier)
 
-**$99/mo**
+- Includes:
+    
+    - deeper risk analysis
+        
+    - opportunity ranking by capital intensity
+        
+    - priority alerts
+        
 
-- Full law breakdowns
-    
-- Opportunity hypotheses
-    
-- Economic impact + capital flow visibility
-    
-
-👉 Value:  
-Client understands **what opportunities exist and why**
+👉 Target: investors / funds
 
 ---
 
-### **Tier 3 — Execution Layer**
+### Tier 4 — $1K+/mo (Advisory / Enterprise)
 
-**$299/mo**
-
-- Compliance + business playbooks
+- Custom:
     
-- Structured execution paths
-    
-- “What to do next” clarity
-    
+    - sector tracking
+        
+    - deeper breakdowns
+        
+    - priority support
+        
 
-👉 Value:  
-Client moves from **idea → action with confidence**
-
-⚠️ Note: This exceeds MVP scope slightly (playbooks) — staged rollout required.
+👉 Target: high-value users
 
 ---
 
-### **Tier 4 — Intelligence Layer**
+### Go-To-Market Strategy
 
-**$999+/mo**
+1. Start with **one vertical (MANDATORY)**
+    
+    - Example: education, energy, defense
+        
+    - Reason: depth > breadth
+        
+2. Distribution:
+    
+    - Newsletter (free tier funnel)
+        
+    - Twitter / LinkedIn (policy + opportunity breakdowns)
+        
+    - Direct outreach to operators
+        
+3. Hook:
+    
 
-- Advanced dashboard
-    
-- Aggregated opportunity tracking
-    
-- Signals across laws, sectors, and capital flows
-    
-- Designed for:
-    
-    - funds
-        
-    - contractors
-        
-    - institutional clients
-        
-
-👉 Value:  
-Client gains **ongoing strategic advantage**
+> “We show where government moves money—and how to capture it.”
 
 ---
 
-## 🧠 Pricing Logic (Why this works)
+## 📊 Financials (First 90 Days)
 
-- Each tier reduces **user-side effort**
+### Startup Costs
+
+- Data ingestion + automation: low–medium
     
-- Each upgrade answers a deeper question:
+- AI processing: medium
+    
+- Interface (simple dashboard): low
     
 
-|Tier|Question Answered|
-|---|---|
-|Free|“What’s happening?”|
-|$29|“What matters to me?”|
-|$99|“Where is the opportunity?”|
-|$299|“What should I do?”|
-|$999+|“Where should I continuously focus?”|
+👉 Estimated: **$5K–$15K MVP**
 
 ---
 
-## ⚠️ Alignment with AGREEMENT
+### Revenue Streams
 
-To stay disciplined:
-
-- MVP supports:
+1. Subscription (primary) → Target: $5K–$10K
     
-    - Free
-        
-    - $29
-        
-    - $99
-        
-- Post-MVP expansion:
-    
-    - $299 (playbooks)
-        
-    - $999+ (dashboard)
-        
-
-👉 Prevents early overbuild
-
----
-
-## CHALLENGE (Hard truth)
-
-1. **$299 tier is the hardest to deliver**
-    
-    - Playbooks require:
-        
-        - deeper research
-            
-        - higher liability
-            
-        - more precision
-            
-2. **$999+ tier is not a feature — it’s a different product**
-    
-    - Dashboard = system, not content
-        
-    - Requires data infrastructure
-        
-3. **Risk of value leakage**
-    
-    - If $99 tier is too good → no one upgrades
-        
-
----
-
-## TIGHTEN (1 Metric + 1 Decision)
-
-**Metric:**  
-➡️ Conversion rate from Free → $29 → $99
-
-**Decision:**  
-➡️ Confirm rollout:
-
-- Phase 1: Free + $29 + $99
-    
-- Phase 2: $299
-    
-- Phase 3: $999+
+2. Advisory (select users) → Target: $5K+
     
 
 ---
 
-## ALIGN (NSD Integrity)
+### 90-Day Revenue Goal
 
-This pricing now:
+👉 **$10K–$20K total**
 
-- Matches user journeys ✅
+---
+
+## 🛤 Milestones (Time-Bound)
+
+---
+
+### **Month 1 — MVP Build**
+
+- Build:
     
-- Aligns with feature depth ✅
+    - policy ingestion
+        
+    - manual + assisted opportunity generation
+        
+- Output:
     
-- Preserves MVP scope discipline ✅
-    
-- Supports long-term expansion ✅
+    - 5–10 real policy breakdowns
+        
+
+✅ Success Metric:
+
+- Users say: “I would act on this”
     
 
+---
 
+### **Month 2 — Early Users + Validation**
+
+- Launch:
+    
+    - newsletter
+        
+    - basic dashboard
+        
+- Acquire:
+    
+    - 25–50 users
+        
+
+✅ Success Metric:
+
+- ≥20% users take real action
+    
+
+---
+
+### **Month 3 — Monetization Test**
+
+- Introduce paid tier
+    
+- Validate willingness to pay
+    
+
+✅ Success Metric:
+
+- $5K+ MRR
+    
+
+---
+
+### **Kill / Pivot Review (End of Month 3)**
+
+Pivot or stop if:
+
+- No one acts on outputs
+    
+- Users consume but don’t pay
+    
+- Trust is questioned
+    

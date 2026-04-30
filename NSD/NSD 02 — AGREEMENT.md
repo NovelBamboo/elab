@@ -1,194 +1,259 @@
-## 📜 NSD — AGREEMENT (ELaB)
+## ANALYZE
+
+STORY defined **what this is**  
+AGREEMENT defines:
+
+- What we **will build (MVP)**
+    
+- What we **will NOT build**
+    
+- What must be **true for this to work**
+    
+- Where this **can fail**
+    
+---
+
+# 📜 NSD — AGREEMENT
 
 ---
 
-## **Scope (MVP / Not-Doing List)**
+## Scope (MVP / Not-Doing List)
 
-### **In Scope (MVP):**
+### ✅ In Scope (MVP)
 
-1. **Law → Opportunity Conversion (Core Engine)**
+1. **Policy Ingestion Layer**
     
-    - Input: new financial / fintech laws
+    - Track new:
         
-    - Output:
-        
-        - plain-language summary
+        - laws
             
-        - affected industries
+        - executive orders
             
-        - opportunity hypotheses
-            
-        - minimum viable execution paths
+        - grants / funding changes
             
 
 ---
 
-2. **Structured Output Format (Standardized Template)**  
-    Each law must include:
+2. **Policy → Market Translation**
     
-    - summary
+    - Identify:
         
-    - economic impact surface
+        - capital flow direction
+            
+        - affected sectors
+            
+        - immediate vs delayed impact
+            
+
+---
+
+3. **Opportunity Output (Core Engine)**
+    
+    - For each policy:
         
-    - opportunities
+        - Top opportunities (ranked)
+            
+        - Clear “why this exists” (policy → funding trace)
+            
+        - Defined target users (who acts)
+            
+
+---
+
+4. **Execution Path Object**
+    
+    - Each opportunity includes:
         
-    - execution paths
+        - specific action
+            
+        - required conditions (location, compliance, capital)
+            
+        - first 3 steps to execute
+            
+
+---
+
+5. **Confidence + Risk Layer**
+    
+    - Every output must include:
+        
+        - confidence score
+            
+        - key risks (policy reversal, legal friction)
+            
+        - uncertainty flags
+            
+
+---
+
+6. **Delivery Interface (Simple)**
+    
+    - Web UX:
+        
+        - policy feed
+            
+        - opportunity list
+            
+    - Alerts:
+        
+        - new high-impact policy events
+            
+
+---
+
+---
+
+### ❌ Out of Scope (Not in MVP)
+
+- ❌ Full financial modeling (no deep valuation engines)
+    
+- ❌ Automated capital deployment (no trading or execution infra)
+    
+- ❌ Legal advice or compliance guarantees
+    
+- ❌ Multi-country policy coverage (start with one jurisdiction)
+    
+- ❌ Complex UI (no Bloomberg-level dashboards yet)
+    
+- ❌ Social / community features
+    
+
+👉 These are explicitly excluded to protect speed + clarity
+
+---
+
+## Complexity Rating
+
+### **Level: Medium–High**
+
+### **Rationale:**
+
+- Complexity is **not UI or infrastructure**
+    
+- Complexity is:
+    
+    - accurate translation of policy → economic opportunity
+        
+    - maintaining trust in outputs
+        
+
+👉 Technical build is manageable  
+👉 **Analytical discipline is the real difficulty**
+
+---
+
+## Assumptions
+
+1. Users value **speed over perfect accuracy** (within reason)
+    
+2. Policy changes create **real, actionable economic shifts**
+    
+3. Early signals provide **measurable advantage**
+    
+4. Users will act on system outputs (not just read them)
+    
+5. Trust can be built through:
+    
+    - traceability
+        
+    - confidence scoring
+        
+    - consistent outputs
         
 
 ---
 
-3. **Trust Layer (Baseline Version)**
-    
-    - source links for every claim
-        
-    - confidence score (simple scale)
-        
-    - uncertainty labeling
-        
+## Tradeoffs
 
----
+### Startup Costs
 
-4. **Delivery Channels**
+- Lower engineering complexity initially
     
-    - Website (core interface)
+- Higher effort in:
+    
+    - data structuring
         
-    - Newsletter (distribution layer)
+    - output quality
         
 
 ---
 
-### **Out of Scope (Not in MVP):**
+### User Benefits
 
-- Full legal interpretation or advice
+- Faster decision-making
     
-- Custom consulting or client-specific recommendations
+- Reduced ambiguity
     
-- Automated real-time ingestion of all global laws
+- Early positioning advantage
     
-- Multi-vertical coverage (beyond initial fintech focus)
-    
-- Deep execution playbooks (step-by-step operational guides)
-    
-- Community features (comments, forums, collaboration tools)
-    
-
-👉 These exclusions protect focus and reduce early complexity.
 
 ---
 
-## **Complexity Rating**
+### Business Benefits
 
-- **Level:** Medium
+- High-value niche users
     
-- **Rationale:**
+- Strong pricing power (decision-driven product)
     
-    - Content generation is structured but repeatable
+- Differentiation through execution focus
+    
+
+---
+
+### Omissions (Deliberate)
+
+- No attempt to be:
+    
+    - news platform
         
-    - Trust layer introduces validation overhead
+    - general AI assistant
         
-    - Limiting to one vertical reduces complexity significantly
+    - broad research tool
         
 
----
-
-## **Assumptions**
-
-1. Clients prefer **actionable summaries over raw legal text**
-    
-2. Clients will trust outputs if:
-    
-    - sources are visible
-        
-    - uncertainty is acknowledged
-        
-3. Financial / fintech laws produce **clear, monetizable opportunities**
-    
-4. Early users will accept **lightweight execution paths (not full playbooks)**
-    
-5. Newsletter + website is sufficient for initial distribution
-    
+👉 This is a **narrow, high-value system**
 
 ---
 
-## **Tradeoffs**
-
-### **Startup Costs**
-
-- Time-intensive law analysis
-    
-- Manual validation for trust layer
-    
-- Limited automation in early stage
-    
+## Risks
 
 ---
 
-### **User Benefits**
+### 1. Adoption Risk
 
-- Faster understanding of laws
-    
-- Clear direction for action
-    
-- Reduced research time
-    
+Users don’t trust outputs enough to act
 
 ---
 
-### **Business Benefits**
+### 2. Technical Risk
 
-- Clear positioning (new category)
-    
-- Strong differentiation
-    
-- Scalable via structured outputs
-    
+Data ingestion gaps or delays reduce speed advantage
 
 ---
 
-### **Omissions (Deliberate)**
+### 3. Distribution Risk
 
-- No attempt to cover all laws
-    
-- No attempt to serve all user types equally
-    
-- No deep execution support in MVP
-    
+Hard to reach high-value users (operators, allocators)
 
 ---
 
-## **Risks**
+### 4. Monetization Risk
 
-### **Adoption Risk**
-
-- Clients may not change behavior from existing sources
-    
+Users consume insights but don’t pay
 
 ---
 
-### **Technical Risk**
+### 5. Regulatory Risk
 
-- Difficulty maintaining consistent, high-quality outputs
-    
-
----
-
-### **Distribution Risk**
-
-- Newsletter may not reach high-value clients efficiently
-    
+Misinterpretation leads to liability concerns
 
 ---
 
-### **Monetization Risk**
+### 6. Epistemic Risk (CRITICAL)
 
-- Clients may consume free insights without converting
+System produces:
+
+- plausible but incorrect execution paths
     
 
----
-
-### **Trust Risk (Critical)**
-
-- Incorrect or misleading interpretation damages credibility
-    
-
----
+👉 This is your **#1 failure mode**

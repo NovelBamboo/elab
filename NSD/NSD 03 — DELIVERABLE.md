@@ -1,4 +1,9 @@
-## 📊 NSD — DELIVERABLE (ELaB)
+---
+
+## DRAFT (📊 NSD — DELIVERABLE SECTION)
+
+---
+# 📊 DELIVERABLE
 
 ---
 
@@ -6,11 +11,13 @@
 
 |Feature|Benefit|Priority (1–5)|Who Cares|
 |---|---|---|---|
-|Law → Opportunity Output|Converts laws into actionable opportunities|1|🎤 Founders, 🎧 Investors|
-|Structured Law Breakdown|Clear summary + impact + opportunities|1|🎤 Founders, 🎧 Investors, 🏢 Operators|
-|Opportunity Hypotheses|Specific business/investment ideas|1|🎤 Founders, 🎧 Investors|
-|Lightweight Execution Paths|Shows how to start|2|🎤 Founders|
-|Trust Layer (Sources + Confidence)|Builds credibility and reduces risk|1|🎧 Investors, 🏢 Operators|
-|Vertical Filtering (Fintech)|Focused discovery|2|🎤 Founders, 🎧 Investors|
-|Newsletter Digest|Passive discovery of opportunities|2|🎤 Founders, 🎧 Investors|
-|Law Archive / Database|Search past opportunities|3|All|
+|Policy Feed (Ranked by Impact)|Instantly see high-impact policy events|1|Operator, Allocator|
+|Opportunity Engine (Top 3–5 per policy)|Clear, ranked opportunities tied to real money|1|Operator|
+|Execution Path Object|Turns opportunity into action steps|1|Operator|
+|Policy → Funding Trace|Builds trust (why this is real)|2|All|
+|Confidence + Risk Layer|Prevents blind decisions|2|Allocator, Strategist|
+|Alerts (High-impact events)|Speed advantage (early signal)|2|Operator, Allocator|
+|Basic Filtering (sector, timeline)|Faster navigation|3|Allocator|
+
+👉 Rule:  
+If a feature does not directly help a user **take action**, it is not included.

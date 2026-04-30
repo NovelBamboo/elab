@@ -4,53 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "b5b76b3fe3f7068b",
+        "id": "2ecd1c5338d8ad5a",
         "type": "tabs",
         "children": [
           {
-            "id": "779851b2695b01ed",
+            "id": "90b199375c1d4d85",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "NSD/NSD 04 — Go-To-Market.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
-            }
-          },
-          {
-            "id": "09f150409112b2c4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "assets/Newsletter - Example.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Newsletter - Example"
-            }
-          },
-          {
-            "id": "9263f906601d0e23",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "assets/Prompt - Scoring.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Prompt - Scoring"
+              "title": "NSD 04 — Go-To-Market"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -123,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "assets/Newsletter - Example.md",
+                "file": "NSD/NSD 04 — Go-To-Market.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Newsletter - Example"
+              "title": "Backlinks for NSD 04 — Go-To-Market"
             }
           },
           {
@@ -142,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "assets/Newsletter - Example.md",
+                "file": "NSD/NSD 04 — Go-To-Market.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Newsletter - Example"
+              "title": "Outgoing links from NSD 04 — Go-To-Market"
             }
           },
           {
@@ -185,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "assets/Newsletter - Example.md",
+                "file": "NSD/NSD 04 — Go-To-Market.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Newsletter - Example"
+              "title": "Outline of NSD 04 — Go-To-Market"
             }
           }
         ]
@@ -212,25 +183,25 @@
       "bases:Create new base": false
     }
   },
-  "active": "09f150409112b2c4",
+  "active": "90b199375c1d4d85",
   "lastOpenFiles": [
-    "assets/Newsletter - Design Doc.md",
-    "assets/Newsletter - Example.md",
-    "idea/idea.analysis.critic.md",
-    "assets/Prompt - Critic.md",
-    "assets/Prompt - Scoring.md",
-    "idea/idea.analysis.scoring.md",
-    "NSD/NSD 04 — Go-To-Market.md",
-    "idea/idea.paper.md",
-    "NSD/NSD 03 — DELIVERABLE.md",
-    "NSD/NSD 01 — STORY.md",
-    "NSD/NSD 02 — AGREEMENT.md",
     "NSD/NSK - Clarify the Narrative.md",
+    "NSD/NSD 04 — Go-To-Market.md",
+    "NSD/NSD 03 — DELIVERABLE.md",
+    "NSD/NSD 02 — AGREEMENT.md",
+    "NSD/NSD 01 — STORY.md",
+    "NSD/🛤  Ideal User Journey.md",
+    "NSD/👤 Ideal User Profile.md",
+    "README.md",
+    "assets/Newsletter - Example.md",
+    "assets/Prompt - Scoring.md",
+    "idea/idea.analysis.critic.md",
     "NSD/🌟 KISS Exercise.md",
     "NSD/✈️ Airport Conversation.md",
-    "NSD/👤 Ideal User Profiles.md",
-    "NSD/👤 Ideal User Journies.md",
-    "README.md",
+    "idea/idea.analysis.scoring.md",
+    "assets/Newsletter - Design Doc.md",
+    "assets/Prompt - Critic.md",
+    "idea/idea.paper.md",
     "WRO/round_6.md",
     "WRO/round_0.md",
     "WRO",
