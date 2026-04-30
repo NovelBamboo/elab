@@ -11,32 +11,13 @@
             "id": "90b199375c1d4d85",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PRD.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "PRD"
-            }
-          },
-          {
-            "id": "bf8dd8b41761c176",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CUTR-ELAB-Gap-Design.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "CUTR-ELAB-Gap-Design"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -109,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CUTR-ELAB-Gap-Design.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for CUTR-ELAB-Gap-Design"
+              "title": "Backlinks"
             }
           },
           {
@@ -128,12 +108,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CUTR-ELAB-Gap-Design.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from CUTR-ELAB-Gap-Design"
+              "title": "Outgoing links"
             }
           },
           {
@@ -171,13 +150,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CUTR-ELAB-Gap-Design.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of CUTR-ELAB-Gap-Design"
+              "title": "Outline"
             }
           }
         ]
@@ -198,40 +176,45 @@
       "bases:Create new base": false
     }
   },
-  "active": "bf8dd8b41761c176",
+  "active": "90b199375c1d4d85",
   "lastOpenFiles": [
-    "assets/Prompt - Due Diligence.md",
-    "CUTR-ELAB-Gap-Design.md",
-    "assets/Prompt - Law Search.md",
-    "assets/Lobbyists.md",
-    "README.md",
-    "Synthetic Team/03-Role Card-tmpl.md",
-    "PRD.md",
+    "elab-docs/WRO/round_6.md",
+    "elab-docs/WRO/round_0.md",
+    "elab-docs/Synthetic Team/ELaB 03 - Synthetic Team.md",
+    "elab-docs/Synthetic Team/03-Role Card.md",
+    "elab-docs/Synthetic Team/ELaB 02 - Role Cards.md",
+    "elab-docs/Synthetic Team/ELaB 01 - Real-World Roles.md",
+    "elab-docs/Synthetic Team/03-Role Card-tmpl.md",
+    "elab-docs/Synthetic Team/02-Trusted Advisor.md",
+    "elab-docs/Synthetic Team/01-Synthetic Teams.md",
+    "elab-docs/idea/idea.paper.md",
+    "elab-docs/idea/idea.analysis.critic.md",
+    "elab-docs/idea/idea.analysis.scoring.md",
+    "elab-docs/assets/compliance.md",
+    "elab-docs/assets/Prompt - Scoring.md",
+    "elab-docs/assets/Newsletter - Design Doc.md",
+    "elab-docs/assets/Prompt - Law Search.md",
+    "elab-docs/assets/Prompt - Due Diligence.md",
+    "elab-docs/assets/Prompt - Critic.md",
+    "elab-docs/assets/Newsletter - Example.md",
+    "elab-docs/assets/Lobbyists.md",
+    "elab-docs/assets/Laws by categories.md",
+    "elab-docs/assets/Laws By Sector.md",
+    "elab-docs/assets/ElaB Differentiators.md",
+    "elab-docs/assets/ELaB Publishing.md",
+    "elab-docs/UX/ELaB-infographic.png",
+    "elab-docs/UX/01-Interaction model.md",
+    "elab-docs/NSD/NSD 03 — DELIVERABLE.md",
+    "elab-docs/idea",
+    "elab-docs/assets",
+    "elab-docs/WRO",
+    "elab-docs/UX",
+    "elab-docs/Synthetic Team",
+    "elab-docs/NSD",
+    "elab-docs",
     "UX/ELaB-infographic.png",
-    "UX/01-Interaction model.md",
-    "Synthetic Team/ELaB 02 - Role Cards.md",
     "UX",
-    "Synthetic Team/04-sdlc-roles-startup.md",
-    "Synthetic Team/ELaB 01 - Real-World Roles.md",
-    "Synthetic Team/04-sdlc-roles.md",
-    "Synthetic Team/ELaB 03 - Synthetic Team.md",
-    "assets/Prompt - Scoring.md",
-    "Synthetic Team/03-Role Card.md",
-    "Synthetic Team/02-Trusted Advisor.md",
-    "Synthetic Team/01-Synthetic Teams.md",
     "Synthetic Team",
-    "NSD/NSD 04 — Go-To-Market.md",
-    "NSD/NSK - Clarify the Narrative.md",
-    "NSD/NSD 03 — DELIVERABLE.md",
-    "NSD/NSD 02 — AGREEMENT.md",
-    "NSD/NSD 01 — STORY.md",
-    "NSD/🛤  Ideal User Journey.md",
-    "NSD/👤 Ideal User Profile.md",
-    "assets/Newsletter - Example.md",
-    "idea/idea.analysis.critic.md",
-    "WRO",
-    "assets",
-    "idea",
-    "NSD"
+    "WRO"
   ]
 }
