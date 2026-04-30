@@ -15,7 +15,7 @@ KISS forces:
 
 If this step fails → the product is not understandable → adoption dies early
 
-## DRAFT 🌟 KISS Exercise (Refined — Client Framing)
+## 🌟 KISS Exercise
 
 ### **1. WHO is it for? 🎯**
 

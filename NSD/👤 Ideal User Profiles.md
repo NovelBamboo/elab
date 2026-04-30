@@ -24,7 +24,7 @@ Not personas like “Startup Sam” — but:
 
 ---
 
-## DRAFT 👤 3 Ideal User Profiles (ELaB)
+## 👤 Ideal User Profiles (ELaB)
 
 ---
 

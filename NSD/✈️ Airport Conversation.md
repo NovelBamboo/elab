@@ -13,7 +13,7 @@ Key signals:
     
 
 ---
-## DRAFT ✈️ Refined Airport Conversation (Sharper, Concrete)
+## ✈️  Airport Conversation
 
 Picture this — 3–5 years from now.
 
