@@ -1,22 +1,28 @@
-Architecture is **multi-app / multi-service**, not one SaaS app.
+# ELaB Application Architecture
 
-# ELaB application split
+Architecture is **multi-app / multi-service**.
+
+---
+
+## ELaB Application Split
 
 ```txt
-1. ELaB SaaS App + Admin Console
-   User-facing interaction layer.
+1. ELaB SaaS & Admin Console App
+   User-facing interaction layer
 
-2. ELaB Data Service
-   Source-of-truth ingestion + normalization layer.
+2. ELaB API
+   Access + orchestration layer
 
-3. ELaB RSS Service
-   Distribution/subscription layer.
+3. ELaB Data Service
+   Source-of-truth + intelligence production
 
-4. ELaB Worker Service
-   Synthetic Team, scoring, enrichment, alerts.
+4. ELaB RSS Service
+   Distribution/subscription layer
 ```
 
-# Correct system flow
+---
+
+## System Flow
 
 ```txt
 Primary Sources
@@ -27,24 +33,18 @@ Primary Sources
   FEC / OpenFEC
         ↓
 ELaB Data Service
-  fetch → normalize → dedupe → store raw + structured
+  fetch → normalize → dedupe → enrich → score → store
         ↓
 ELaB Datastore
   Neon Postgres = structured truth
   Cloudflare R2 = raw documents / snapshots / artifacts
         ↓
-Worker Service
-  Synthetic Team analysis
-  confidence scoring
-  validation
-  opportunity extraction
-        ↓
-ELaB Datastore
-        ↓
 RSS Service
   generated feeds
   subscriber-specific feeds
   public digest feeds
+        ↓
+ELaB API
         ↓
 SaaS App
   feed UI
@@ -53,318 +53,171 @@ SaaS App
   alerts
 ```
 
-This matches the PRD’s pipeline: **Import → Format → Distribute → Integrate**, and keeps the 72-hour policy-to-action promise intact.
+Key shift:
 
+> **Interpretation happens inside Data Service. Not in a separate worker.**
 
-# 5 Repos
+---
+
+## Repo Structure (Updated)
 
 ```txt
 github/
   elab-app
   elab-api
   elab-data-service
-  elab-worker-service
   elab-rss-service
 ```
 
+---
+
 ## 1. `elab-app`
 
-**Owns:** user + admin interface.
+**Owns:** user + admin interface only.
 
 ```txt
-- SaaS web app (w/ admin console)
-- login/billing/settings
-- Decision Feed UI
+- Decision Feed UI (social-first, not dashboard)
+- @Role / @Team interactions
 - opportunity pages
-- role threads
+- execution paths
+- alerts + subscriptions
+- account / billing
 ```
 
-Tech:
+Constraints:
 
 ```txt
-Next.js
-React
-TypeScript
-CSS/design tokens from CUTR
-Clerk/Auth.js
-Stripe client
-```
-
-Deploy:
-
-```txt
-Railway
+- never fetch external sources
+- never compute policy meaning
+- reads only from API
 ```
 
 ---
 
 ## 2. `elab-api`
 
-**Owns:** public/internal API gateway.
+**Owns:** access layer.
 
 ```txt
-- auth enforcement
-- org/user access
+- auth + org/user scoping
 - feed endpoints
 - policy endpoints
 - opportunity endpoints
 - interaction endpoints
+- alert endpoints
 - billing webhooks
 ```
 
-Tech:
+Constraints:
 
 ```txt
-NestJS
-TypeScript
-Prisma/Drizzle
-Neon Postgres
-Redis client
-OpenAPI
+- no ingestion
+- no enrichment
+- no LLM execution
 ```
 
-It should not scrape sources or run LLM jobs.
+It exposes—not creates—truth.
 
 ---
 
-## 3. `elab-data-service`
+## 3. `elab-data-service` (Critical Change)
 
-**Owns:** source-of-truth ingestion.
+**Owns BOTH:**
 
-```txt
-congress.gov
-federalregister.gov
-grants.gov
-usaspending.gov
-OpenFEC/FEC
-```
+- ingestion
+    
+- intelligence production
+    
 
-Responsibilities:
+This replaces the Worker Service entirely.
 
-```txt
-fetch
-normalize
-dedupe
-version
-store raw source snapshots in R2
-store structured records in Neon
-emit jobs/events
-```
+---
 
-Tech:
+### Responsibilities
 
 ```txt
-NestJS or plain Node worker
-TypeScript
-BullMQ producer
-Cloudflare R2
-Neon
+INGESTION
+- fetch primary + supplemental sources
+- normalize records
+- dedupe + version
+- store raw snapshots in R2
+- store structured records in Neon
+
+INTELLIGENCE
+- run Synthetic Team logic inline or scheduled
+- policy → market translation
+- opportunity extraction
+- funding flow mapping
+- constraint identification
+- time horizon modeling
+- confidence scoring
+- generate feed-ready objects
 ```
 
 ---
 
-## 4. `elab-worker-service`
+### Internal Execution Model
 
-**Owns:** intelligence production.
-
-```txt
-Synthetic Team runs
-OpenAI/DeepSeek calls
-policy → market translation
-opportunity extraction
-confidence scoring
-Reviewer validation
-Truth-Teller follow-up
-alert generation
-```
-
-Tech:
+No external worker service. Instead:
 
 ```txt
-NestJS worker
-BullMQ
-Redis
-OpenAI
-DeepSeek
-Neon
-R2 artifact writes
+- async job queue (BullMQ / equivalent)
+- cron triggers
+- event-driven processing (DB insert/update hooks)
 ```
 
-Role outputs must be justifiable, observable, and auditable, matching AiD Synthetic Team constraints.
+This keeps compute **internal but asynchronous**.
 
 ---
 
-## 5. `elab-rss-service`
-
-**Owns:** feed distribution.
-
-```txt
-public RSS
-private tokenized RSS
-sector feeds
-agency feeds
-opportunity feeds
-newsletter export feeds
-```
-
-Direction is fixed:
-
-```txt
-ELaB datastore → RSS Service → SaaS app / RSS readers / newsletter
-```
-
-Not:
-
-```txt
-RSS → datastore
-```
-
-Tech:
-
-```txt
-NestJS or Fastify
-TypeScript
-feed package
-Neon
-Redis cache
-```
-
-# Shared code problem
-
-Since these are separate repos, avoid copy-paste with one shared package repo later:
-
-```txt
-elab-contracts
-```
-
-But not immediately. Start with copied OpenAPI/JSON schemas, then extract when stable.
-
-Shared contracts:
-
-```txt
-PolicyItem
-PolicyVersion
-SourceRecord
-RoleArtifact
-FeedPost
-Opportunity
-ExecutionPath
-ConfidenceScore
-RSSFeedItem
-```
-
-# Build sequence
-
-```txt
-1. elab-data-service
-2. elab-api
-3. elab-worker-service
-4. elab-rss-service
-5. elab-app
-```
-
-Reason: truth first, access second, intelligence third, distribution fourth, interface last.
-
-# Hard rule
-
-Each repo gets its own:
-
-```txt
-README
-.env.example
-Dockerfile
-Railway config
-health endpoint
-OpenAPI/contract docs where relevant
-test suite
-deployment pipeline
-```
-
-This keeps the system from becoming a hidden monolith. AiD explicitly treats architecture, API contracts, data models, edge cases, and failure modes as pre-build simulation artifacts, not afterthoughts.
-
-# Service responsibilities
-
-## 1. SaaS App
-
-Purpose: **user interaction only**.
-
-```txt
-- Decision Feed
-- @Role / @Team interactions
-- opportunity detail pages
-- execution paths
-- saved feeds
-- alert preferences
-- account/billing
-```
-
-It should **not** fetch Congress.gov directly. It reads from ELaB APIs/datastore only.
-
----
-
-## 2. Data Service
-
-Purpose: **source-of-truth ingestion**.
-
-```txt
-congress.gov → normalized bills/laws
-federalregister.gov → rules, notices, EOs
-grants.gov → grant opportunities
-usaspending.gov → spending traces
-FEC/OpenFEC → political finance signals
-```
-
-Stores:
+### Storage
 
 ```txt
 Neon:
   source_records
   policy_items
   policy_versions
-  agencies
-  funding_programs
-  source_links
+  actors
+  funding_flows
+  opportunities
+  constraints
+  time_horizons
+  confidence_scores
+  feed_posts
 
 Cloudflare R2:
   raw API responses
   PDFs
-  XML/JSON snapshots
+  HTML snapshots
   generated artifacts
 ```
 
-This service owns truth. Everything else is downstream.
+---
+
+### Hard Constraint
+
+> Data Service defines system truth. Everything else reads it.
 
 ---
 
-## 3. Worker Service
+## 4. `elab-rss-service`
 
-Purpose: **interpretation and enrichment**.
-
-```txt
-- run Synthetic Team sequence
-- produce Policy Object
-- produce Distortion Surface
-- validate opportunities
-- generate Execution Path
-- compute confidence/risk
-- create feed posts
-```
-
-The Synthetic Team must remain role-governed: one role, one pass, auditable output.
+**Owns:** distribution only.
 
 ---
 
-## 4. RSS Service
-
-Purpose: **distribution, not ingestion**.
-
-Correct direction:
+### Responsibilities
 
 ```txt
-ELaB datastore → RSS feeds → SaaS site / subscribers / external readers
+- convert feed_posts → RSS items
+- generate segmented feeds
+- deduplicate entries
+- cache feed responses
 ```
 
-Feed types:
+---
+
+### Feed Types
 
 ```txt
 /public/rss/policies
@@ -375,30 +228,47 @@ Feed types:
 /private/rss/orgs/:token
 ```
 
-RSS is a product surface. It should expose curated ELaB outputs, not raw source chaos.
-
 ---
 
-## 5. API Service
-
-Purpose: **bounded access layer**.
+### Constraint
 
 ```txt
-GET /feed
-GET /policies
-GET /policies/:id
-GET /opportunities
-POST /interactions
-POST /team-runs
-GET /rss/feeds
-POST /alerts
+- no enrichment
+- no scoring
+- no interpretation
 ```
-
-NestJS fits here cleanly.
 
 ---
 
-# Deployment model on Railway
+## Updated Data Flow
+
+```mermaid
+sequenceDiagram
+    participant S as Source
+    participant D as Data Service
+    participant R2 as Cloudflare R2
+    participant DB as Neon DB
+    participant RSS as RSS Service
+    participant API as ELaB API
+    participant UI as SaaS
+
+    S->>D: Raw source data
+    D->>R2: Store immutable raw artifact
+    D->>DB: Normalize + store structured record
+
+    D->>DB: Enrich (LLM + logic)
+    D->>DB: Score + generate feed_post
+
+    DB->>RSS: Read feed-ready data
+    RSS->>API: Feed output
+
+    DB->>API: Policy + opportunity data
+    API->>UI: Structured experience
+```
+
+---
+
+## Deployment Model (Updated)
 
 ```txt
 Railway Project: elab-prod
@@ -406,12 +276,12 @@ Railway Project: elab-prod
 Services:
   api-service
   data-service
-  worker-service
   rss-service
   saas-web
   admin-web
-  redis
-  cron-ingestion
+  redis (for internal jobs)
+
+NO worker-service
 ```
 
 External:
@@ -419,21 +289,106 @@ External:
 ```txt
 Neon Postgres
 Cloudflare R2
-OpenAI
-DeepSeek
+OpenAI / DeepSeek
 Stripe
 Resend
 Sentry
 ```
 
+---
 
-RSS should be a **first-class application/service**:
+## What You Gained
+
+### 1. Fewer failure points
+
+No queue-service split failures.
+
+### 2. Clear ownership
+
+- Data = truth + intelligence
+    
+- API = access
+    
+- RSS = distribution
+    
+- App = interaction
+    
+
+### 3. Faster iteration
+
+No cross-service coordination for core logic.
+
+---
+
+## What You Gave Up (Be honest)
+
+You lose:
+
+- independent scaling of compute
+    
+- isolation of LLM workloads
+    
+- clean retry orchestration at scale
+    
+
+You only need those when:
 
 ```txt
-Data Service creates truth.
-Worker Service creates interpretation.
-RSS Service distributes structured intelligence.
-SaaS App provides interaction.
+- ingestion volume explodes
+- LLM cost/latency dominates
+- jobs exceed request lifecycle limits
 ```
 
-This preserves separation of concerns and avoids turning the SaaS app into a bloated god process.
+Not now.
+
+---
+
+## Hard Rule (Updated)
+
+```txt
+Data Service:
+  owns truth + interpretation
+
+RSS Service:
+  owns distribution
+
+API:
+  owns access
+
+App:
+  owns experience
+```
+
+Break this and the system collapses into hidden coupling.
+
+---
+
+## Final Check (AiD Compliance)
+
+If you cannot answer these immediately, you’re still pre-simulation:
+
+- What triggers enrichment? (event vs cron)
+    
+- When is a record “feed-ready”?
+    
+- How is confidence scored?
+    
+- What invalidates a previous interpretation?
+    
+
+Unanswered = latent SITD risk
+
+---
+
+If you want the next step, don’t expand architecture.
+
+Pick one:
+
+- DB schema (tables + relationships)
+    
+- API contract (real endpoints + payloads)
+    
+- feed scoring model
+    
+
+That’s where this either becomes real—or collapses.
