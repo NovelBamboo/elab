@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "elab-docs/Plan/Architecture.md",
+                "file": "elab-docs/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Architecture"
+              "title": "README"
             }
           }
         ],
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "elab-docs/Plan/Architecture.md",
+                "file": "elab-docs/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Architecture"
+              "title": "Backlinks for README"
             }
           },
           {
@@ -142,12 +142,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "elab-docs/Plan/Architecture.md",
+                "file": "elab-docs/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Architecture"
+              "title": "Outgoing links from README"
             }
           },
           {
@@ -185,13 +185,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "elab-docs/Plan/Architecture.md",
+                "file": "elab-docs/README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Architecture"
+              "title": "Outline of README"
             }
           }
         ]
@@ -214,8 +214,8 @@
   },
   "active": "37d5a0a58edcbb65",
   "lastOpenFiles": [
-    "elab-docs/Plan/Architecture - Diagrams.md",
     "elab-docs/Plan/Architecture.md",
+    "elab-docs/Plan/Architecture - Diagrams.md",
     "elab-docs/Plan/Architecture - App.md",
     "elab-docs/Plan/phase-plan.md",
     "elab-docs/design/elab-system-of-record.md",

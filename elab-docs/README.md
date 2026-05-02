@@ -2,22 +2,25 @@
 
 This document will outline the process for non-code development process for greenfield Novel Bamboo Software.
 
-1. Run WRO
-2. Analysis (Critic / Scoring)
+1. Run WRO-STDLC (w/ Synthetic Team)
+2. Run AiD (w/ Synthetic Team) 
+	1. Analysis Critic
+	2. Analysis Scoring
+	3. Tech Stack
+	4. Diagrams
+	5. Infographics
+	6. APIs
+	7. UX interaction Model
+	8. Dev Plan (build / deployment)
 3. Run NSD Process
 	1. [NSK: Clarify The Narrative](https://chatgpt.com/g/g-68bf35af3d9081918a629fae549fe2fb-nsk-clarify-the-narrative)
 	2. PAM
 4. Assets
-5. Synthetic Team
-6. UX interaction Model
-7. PRD
-8. Gap Analysis needed: between /Users/novelbamboo/Desktop/github/cutr and ElaB PRD. Instruction on what changes need to be made to cutr to convert cutr codebase into elab application. Save analysis to CUTR-ELAB-Gap-Design.md
-9. Diagrams
-10. Data Engineering
+5. PRD
+6. Gap Analysis needed: between /Users/novelbamboo/Desktop/github/cutr and ElaB PRD. Instruction on what changes need to be made to cutr to convert cutr codebase into elab application. Save analysis to CUTR-ELAB-Gap-Design.md
+7. Data Engineering
 	1. Importing Data (.gov sites)
 	2. Formating Data (datastore)
 	3. Distributing Data (RSS)
 	4. Integrating Data (RAG)
-11. APIs
-12. UI Design
-13. Deployment
+8. UI Design

@@ -53,13 +53,11 @@ SaaS App
   alerts
 ```
 
-Key shift:
-
 > **Interpretation happens inside Data Service. Not in a separate worker.**
 
 ---
 
-## Repo Structure (Updated)
+## Repo Structure
 
 ```txt
 github/
@@ -71,9 +69,9 @@ github/
 
 ---
 
-## 1. `elab-app`
+## 1. `elab-apps
 
-**Owns:** user + admin interface only.
+**Owns:** user & admin interface.
 
 ```txt
 - Decision Feed UI (social-first, not dashboard)
@@ -89,7 +87,6 @@ Constraints:
 ```txt
 - never fetch external sources
 - never compute policy meaning
-- reads only from API
 ```
 
 ---
@@ -113,7 +110,6 @@ Constraints:
 ```txt
 - no ingestion
 - no enrichment
-- no LLM execution
 ```
 
 It exposes—not creates—truth.
@@ -128,9 +124,6 @@ It exposes—not creates—truth.
     
 - intelligence production
     
-
-This replaces the Worker Service entirely.
-
 ---
 
 ### Responsibilities
@@ -157,8 +150,6 @@ INTELLIGENCE
 ---
 
 ### Internal Execution Model
-
-No external worker service. Instead:
 
 ```txt
 - async job queue (BullMQ / equivalent)
@@ -240,7 +231,7 @@ Cloudflare R2:
 
 ---
 
-## Updated Data Flow
+## Data Flow
 
 ```mermaid
 sequenceDiagram
@@ -268,10 +259,10 @@ sequenceDiagram
 
 ---
 
-## Deployment Model (Updated)
+## Deployment Model
 
 ```txt
-Railway Project: elab-prod
+Railway/Netlify Project: elab-prod
 
 Services:
   api-service
@@ -297,73 +288,25 @@ Sentry
 
 ---
 
-## What You Gained
-
-### 1. Fewer failure points
-
-No queue-service split failures.
-
-### 2. Clear ownership
-
-- Data = truth + intelligence
-    
-- API = access
-    
-- RSS = distribution
-    
-- App = interaction
-    
-
-### 3. Faster iteration
-
-No cross-service coordination for core logic.
-
----
-
-## What You Gave Up (Be honest)
-
-You lose:
-
-- independent scaling of compute
-    
-- isolation of LLM workloads
-    
-- clean retry orchestration at scale
-    
-
-You only need those when:
-
-```txt
-- ingestion volume explodes
-- LLM cost/latency dominates
-- jobs exceed request lifecycle limits
-```
-
-Not now.
-
----
-
-## Hard Rule (Updated)
+## Hard Rule
 
 ```txt
 Data Service:
   owns truth + interpretation
 
 RSS Service:
-  owns distribution
+  owns distribution/syndication
 
 API:
   owns access
 
 App:
-  owns experience
+  owns user experience
 ```
-
-Break this and the system collapses into hidden coupling.
 
 ---
 
-## Final Check (AiD Compliance)
+## Check (AiD Compliance)
 
 If you cannot answer these immediately, you’re still pre-simulation:
 
@@ -380,15 +323,10 @@ Unanswered = latent SITD risk
 
 ---
 
-If you want the next step, don’t expand architecture.
-
-Pick one:
+# Next Steps
 
 - DB schema (tables + relationships)
     
 - API contract (real endpoints + payloads)
     
 - feed scoring model
-    
-
-That’s where this either becomes real—or collapses.
